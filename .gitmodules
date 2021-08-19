@@ -1,0 +1,6 @@
+[submodule "prog-scala-2nd-ed-code-examples"]
+	path = prog-scala-2nd-ed-code-examples
+	url = git@github.com:eepgwde/prog-scala-2nd-ed-code-examples.git
+[submodule "spark-eg0"]
+	path = spark-eg0
+	url = git@github.com:eepgwde/spark-eg0.git
