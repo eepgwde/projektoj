@@ -20,22 +20,24 @@ lazy val commons = Seq(
       "-language:experimental.macros")
   )
 
+lazy val root = (project in file("."))
+  .aggregate(eg, spark)
+//  .settings(
+//    update / aggregate := false
+//  )
+
 lazy val spark = (project in file("spark-eg0"))
   .settings(
-    	name := "Scala/R/Python interworking",
-	commons
+       name := "Scala/R/Python interworking",
+       commons
   )
 
-lazy val eg0 = (project in file("prog-scala-2nd-ed-code-examples"))
+lazy val eg = (project in file("prog-scala-2nd-ed-code-examples"))
   .settings(
     	name := "Prog-Scala",
-	commons
+	    commons
   )
-
-//  .dependsOn(spark)
-
-lazy val root = (project in file("."))
-  .aggregate(spark, eg0)
+  .dependsOn(spark)
 
 mainClass in (Compile, run) := Some("progscala2.fp.loops.Factorial")
 

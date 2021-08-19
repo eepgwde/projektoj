@@ -1,0 +1,1 @@
+../prog-scala-2nd-ed-code-examples/project/Dependencies.scala
